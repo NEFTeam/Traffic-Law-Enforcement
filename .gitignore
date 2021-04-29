@@ -2,6 +2,8 @@
 __pycache__/
 **/__pycache__/
 **/*.pt
+**/*.png
+**/*.jpg
 *.py[cod]
 *$py.class
 
