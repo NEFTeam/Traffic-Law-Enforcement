@@ -12,7 +12,7 @@ class CAR_DETECTION():
         self.yolo_model = attempt_load(weights=model_path, map_location=device)
 
     def detect(self,main_img):
-        height, width = img1.shape[:2]
+        height, width = main_img.shape[:2]
         new_height = np.round((640/width)*height, -1)
 
         img = cv2.resize(main_img, (640,new_height))
@@ -59,7 +59,7 @@ class PLATE_DETECTION():
             [ymin,ymax] = np.clip([ymin,ymax],0,frame.shape[0])
             cropped_image = frame[ymin:ymax, xmin:xmax]
             
-            height, width = img1.shape[:2]
+            height, width = cropped_image.shape[:2]
             new_height = np.round((640/width)*height, -1)
 
             img = cv2.resize(cropped_image, (640,new_height))
@@ -100,7 +100,7 @@ class CHAR_EXTRACTION():
                 [(xmin,ymin),(xmax,ymax)] = item['plate_bbox']
                 cropped_image = frame[ymin:ymax, xmin:xmax]
 
-                height, width = img1.shape[:2]
+                height, width = cropped_image.shape[:2]
                 new_height = np.round((640/width)*height, -1)
 
                 img = cv2.resize(cropped_image, (640,new_height))
