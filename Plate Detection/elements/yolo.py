@@ -12,8 +12,10 @@ class CAR_DETECTION():
         self.yolo_model = attempt_load(weights=model_path, map_location=device)
 
     def detect(self,main_img):
+        height, width = img1.shape[:2]
+        new_height = np.round((640/width)*height, -1)
 
-        img = cv2.resize(main_img, (640,384))
+        img = cv2.resize(main_img, (640,new_height))
         img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         img = np.moveaxis(img,-1,0)
         img = torch.from_numpy(img).to(device)
@@ -31,9 +33,9 @@ class CAR_DETECTION():
                     score = np.round(p[4].cpu().detach().numpy(),2)
                     label = self.classes[int(p[5])]
                     xmin = int(p[0] * main_img.shape[1] /640)
-                    ymin = int(p[1] * main_img.shape[0] /384)
+                    ymin = int(p[1] * main_img.shape[0] /new_height)
                     xmax = int(p[2] * main_img.shape[1] /640)
-                    ymax = int(p[3] * main_img.shape[0] /384)
+                    ymax = int(p[3] * main_img.shape[0] /new_height)
 
                     item = {'label': label,
                             'bbox' : [(xmin,ymin),(xmax,ymax)],
@@ -56,7 +58,11 @@ class PLATE_DETECTION():
             [xmin,xmax] = np.clip([xmin,xmax],0,frame.shape[1])
             [ymin,ymax] = np.clip([ymin,ymax],0,frame.shape[0])
             cropped_image = frame[ymin:ymax, xmin:xmax]
-            img = cv2.resize(cropped_image, (640,384))
+            
+            height, width = img1.shape[:2]
+            new_height = np.round((640/width)*height, -1)
+
+            img = cv2.resize(cropped_image, (640,new_height))
             img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
             img = np.moveaxis(img,-1,0)
             img = torch.from_numpy(img).to(device)
@@ -73,9 +79,9 @@ class PLATE_DETECTION():
                         score = np.round(p[4].cpu().detach().numpy(),2)
                         label = self.classes[int(p[5])]
                         p_xmin = int(p[0] * cropped_image.shape[1] /640) + xmin
-                        p_ymin = int(p[1] * cropped_image.shape[0] /384) + ymin
+                        p_ymin = int(p[1] * cropped_image.shape[0] /new_height) + ymin
                         p_xmax = int(p[2] * cropped_image.shape[1] /640) + xmin
-                        p_ymax = int(p[3] * cropped_image.shape[0] /384) + ymin
+                        p_ymax = int(p[3] * cropped_image.shape[0] /new_height) + ymin
 
                     item['plate_bbox'] = [(p_xmin,p_ymin),(p_xmax,p_ymax)]
                 except:
@@ -93,7 +99,11 @@ class CHAR_EXTRACTION():
             if item['plate_bbox'] is not None:
                 [(xmin,ymin),(xmax,ymax)] = item['plate_bbox']
                 cropped_image = frame[ymin:ymax, xmin:xmax]
-                img = cv2.resize(cropped_image, (640,192))
+
+                height, width = img1.shape[:2]
+                new_height = np.round((640/width)*height, -1)
+
+                img = cv2.resize(cropped_image, (640,new_height))
                 img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
                 img = np.moveaxis(img,-1,0)
                 img = torch.from_numpy(img).to(device)
