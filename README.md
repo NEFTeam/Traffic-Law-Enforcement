@@ -34,16 +34,24 @@ All the codes are available in the repository and also one of the future plans o
 All activities of this project have been under the supervision of the National Elite Foundation of Iran and the team members have received elite points in exchange for carrying out this project.
 1.Abbas Omidi (abbasomidi77@gmail.com)
 linkedin : https://www.linkedin.com/in/abbasomidi77/
+
 2.Amirhossein Heydarian (amirhossein4633@gmail.com )
 linkedin : https://www.linkedin.com/in/amirhosseinh77/
+
 3.Aida Mohammadshahi (https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/)
 linkdein : https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/
+
 4.Ali Salehi (thealisalehi96@gmail.com)
+
 5.Behnam Asghari (behnam.asghari1370@gmail.com)
+
 6.Ehsan Noshahri (noshahriehsan@gmail.com)
 
 ### citations
 1.https://github.com/ultralytics/yolov5
+
 2.https://en.wikipedia.org/wiki/Hough_transform
+
 3.https://github.com/zhixuhao/unet
+
 download Unet model from [here](https://drive.google.com/file/d/1P-LwX_eisBQULqKOQajFWTH011QPLutS/view?usp=sharing)
