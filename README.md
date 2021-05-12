@@ -1,45 +1,48 @@
 # Traffic Surveillance
 
 ## Introduction
-In this project, we intend to detect some traffic violations with the help of cameras located on the road.
-Some of the specialized operations performed include identifying the vehicle on the road, identifying the location of the license plate in the image of a vehicle, identifying the license plate characters and registering it, as well as identifying the vehicle lane on the highway, which is mainly done through yolov5 network.[1]
+In this project, we intend to detect common traffic violations using surveillance cameras on roads.
+Some of the specialized operations performed during this task include identifying different vehicles on the road, detecting the license plate of each vehicle, recognizing the characters on each license plate and recording them, as well as specifying the lane number of each vehicle. 
+The YOLOv5 network[1] has been widely used throughout this project.
 
-### identifying the vehicle on the road
-In this section, you can see a picture of the result of identifying the cars on the road. The same type as before was done with the help of the yolov5 network.
+
+### Identifying vehicles on the road
+Below, you can see a sample result of identifying different vehicles on the road. The YOLOv5 network has been used to perform this operation.
 
 ![10](https://user-images.githubusercontent.com/61683254/117567325-12808c80-b0d1-11eb-906c-80c51df0fde1.PNG)
 
-
-### identifying the location of the license plate in the image of a vehicle
-In this section, you will see a picture of the result of identifying the location of the license plate in a photo of a car.
-The process of training the model was done with the help of the yolov5 network, but the collection of data and training images was the responsibility of the team members. 
+### Detecting the license plate location of each vehicle
+In this section, you can see the performance of the model trained for detecting the location of license plates from the vehicle images.
+The training of the detection model was done with the help of the YOLOv5 network, but the collection and preparation of the training dataset has been conducted by the team members. 
 
 ![20](https://user-images.githubusercontent.com/61683254/117567443-a94d4900-b0d1-11eb-9653-d4ec5f55b8c5.PNG)
 
-### identifying the license plate characters and registering it
-The result of identifying different license plate characters can also be seen in the following section, which is done by collecting a lot of training Data and the yolov5 network, although the result of different algorithms such as OCR has been examined during the project.
+### Recognition of license plate characters
+The result of recognizing different license plate characters can be seen in the following section.
+This task involved collecting and annotating a large amount of image data and training the YOLOv5 network with them. Other methods and algorithms such as OCR have also been examined for this part.
 
 ![40](https://user-images.githubusercontent.com/61683254/117567713-8d967280-b0d2-11eb-99cf-084b9f4dd8e6.PNG)
 
-
-### identifying the vehicle lane on the highway
-In this part, the final result is obtained by identifying the highway lines by the yolov5 network, but during the final result, different methods and algorithms such as classical image processing methods such as the Huff algorithm[2] and the network Unet have been used.[3]
+### Identifying lane numbers and masks
+In this part, line segments on the roads have been identified using the YOLOv5 network. 
+However, to generate the lane masks and their number, image processing methods such as Hough transform[2] and other neural networks such as UNet[3] have been employed.
 
 ![30](https://user-images.githubusercontent.com/61683254/117567846-4361c100-b0d3-11eb-909e-062b24d50791.PNG)
 
-### future plans
-All the codes are available in the repository and also one of the future plans of our team is to implement these algorithms embedded on the Jetson Nano processor.
+### Future plans
+All of the codes and model weights in this repository will be made publicly available upon the completion of the project. Also we intend to implement this project on NVIDIA Jetson Nano Developer Kit.
 
 ### Introducing our team
-All activities of this project have been under the supervision of the National Elite Foundation of Iran and the team members have received elite points in exchange for carrying out this project.
+All of the activities of this project have been under the supervision of the National Elite Foundation of Iran and the team members have received elite points in exchange for carrying out this project.
+
 1.Abbas Omidi (abbasomidi77@gmail.com)
-linkedin : https://www.linkedin.com/in/abbasomidi77/
+LinkedIn : https://www.linkedin.com/in/abbasomidi77/
 
 2.Amirhossein Heydarian (amirhossein4633@gmail.com )
-linkedin : https://www.linkedin.com/in/amirhosseinh77/
+LinkedIn : https://www.linkedin.com/in/amirhosseinh77/
 
 3.Aida Mohammadshahi (https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/)
-linkdein : https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/
+LinkedIn : https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/
 
 4.Ali Salehi (thealisalehi96@gmail.com)
 
@@ -47,7 +50,7 @@ linkdein : https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/
 
 6.Ehsan Noshahri (noshahriehsan@gmail.com)
 
-### citations
+### Citations
 1.https://github.com/ultralytics/yolov5
 
 2.https://en.wikipedia.org/wiki/Hough_transform
