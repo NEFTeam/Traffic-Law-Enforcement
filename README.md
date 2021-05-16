@@ -35,20 +35,17 @@ All of the codes and model weights in this repository will be made publicly avai
 ### Introducing our team
 All of the activities of this project have been under the supervision of the National Elite Foundation of Iran and the team members have received elite points in exchange for carrying out this project.
 
-1.Abbas Omidi (abbasomidi77@gmail.com)
-LinkedIn : https://www.linkedin.com/in/abbasomidi77/
+- Abbas Omidi --- [Linkedin](https://www.linkedin.com/in/abbasomidi77/), [Github](https://github.com/abbasomidi77), [Email](mailto:abbasomidi77@gmail.com)
 
-2.Amirhossein Heydarian (amirhossein4633@gmail.com )
-LinkedIn : https://www.linkedin.com/in/amirhosseinh77/
+- Amirhossein Heydarian ---  [Linkedin](https://www.linkedin.com/in/amirhosseinh77/), [Github](https://github.com/amirhosseinh77), [Email](mailto:amirhossein4633@gmail.com )
 
-3.Aida Mohammadshahi (https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/)
-LinkedIn : https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/
+- Aida Mohammadshahi ---  [Linkedin](https://www.linkedin.com/in/aida-mohammadshahi-9845861b3/), [Github](https://github.com/aidamohammadshahi), [Email](mailto:aidamoshahi@gmail.com)
 
-4.Ali Salehi (thealisalehi96@gmail.com)
+- Ali Salehi [Email](mailto:thealisalehi96@gmail.com)
 
-5.Behnam Asghari (behnam.asghari1370@gmail.com)
+- Behnam Asghari [Email](mailto:behnam.asghari1370@gmail.com)
 
-6.Ehsan Noshahri (noshahriehsan@gmail.com)
+- Ehsan Noshahri [Email](mailto:noshahriehsan@gmail.com)
 
 ### Citations
 1.https://github.com/ultralytics/yolov5
