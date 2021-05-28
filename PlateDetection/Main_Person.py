@@ -5,6 +5,7 @@ import os
 from glob import glob
 from time import time
 import argparse
+import matplotlib.pyplot as plt
 parser = argparse.ArgumentParser()
 parser.add_argument('--image', type = str, default = 'a.jpg' , help = 'Name of the input image.')
 args = parser.parse_args()
@@ -29,6 +30,5 @@ for Person in Persons:
     frame = cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), [0,255,255] , 2) 
     frame = cv2.putText(frame, f'{label} ({str(score)})', (xmin,ymin), cv2.FONT_HERSHEY_SIMPLEX , 0.75, [0,255,255], 2, cv2.LINE_AA)
 
-cv2.imshow('frame', frame)
-cv2.waitkey()
+plt.imshow(frame)
 
