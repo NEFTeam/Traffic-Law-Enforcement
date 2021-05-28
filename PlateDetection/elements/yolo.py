@@ -112,7 +112,7 @@ class CHAR_EXTRACTION():
                     img = img.unsqueeze(0)
 
                 pred = self.yolo_model(img, augment=False)[0]
-                pred = non_max_suppression(pred, conf_thres=0.5, iou_thres=0.5, classes=None)
+                pred = non_max_suppression(pred, conf_thres=0.25, iou_thres=0.45, classes=None)
                 plate_res = []
                 if pred[0] is not None and len(pred):    
                     char_preds = pred[0].cpu().detach().numpy()
