@@ -31,4 +31,4 @@ for Person in Persons:
     frame = cv2.putText(frame, f'{label} ({str(score)})', (xmin,ymin), cv2.FONT_HERSHEY_SIMPLEX , 0.75, [0,255,255], 2, cv2.LINE_AA)
 
 plt.imshow(frame)
-
+plt.show()
