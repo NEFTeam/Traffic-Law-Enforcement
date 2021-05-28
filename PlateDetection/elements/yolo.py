@@ -13,7 +13,7 @@ class CAR_DETECTION():
 
     def detect(self,main_img):
         height, width = main_img.shape[:2]
-        new_height = np.round((640/width)*height, -1)
+        new_height = int(640/width)*height)
 
         img = cv2.resize(main_img, (640,new_height))
         img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
@@ -60,7 +60,7 @@ class PLATE_DETECTION():
             cropped_image = frame[ymin:ymax, xmin:xmax]
             
             height, width = cropped_image.shape[:2]
-            new_height = np.round((640/width)*height, -1)
+            new_height = int(640/width)*height)
 
             img = cv2.resize(cropped_image, (640,new_height))
             img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
@@ -101,7 +101,7 @@ class CHAR_EXTRACTION():
                 cropped_image = frame[ymin:ymax, xmin:xmax]
 
                 height, width = cropped_image.shape[:2]
-                new_height = np.round((640/width)*height, -1)
+                new_height = int(640/width)*height)
 
                 img = cv2.resize(cropped_image, (640,new_height))
                 img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
