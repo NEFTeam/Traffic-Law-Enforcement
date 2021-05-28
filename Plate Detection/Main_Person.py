@@ -29,11 +29,3 @@ for Person in Persons:
     frame = cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), [0,255,255] , 2) 
     frame = cv2.putText(frame, f'{label} ({str(score)})', (xmin,ymin), cv2.FONT_HERSHEY_SIMPLEX , 0.75, [0,255,255], 2, cv2.LINE_AA)
 
-    if Person['plate_bbox'] is not None:
-        [(xmin,ymin),(xmax,ymax)] = car['plate_bbox']
-        frame = cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), [255,0,0] , 2) 
-        frame = cv2.putText(frame, 'plate', (xmin,ymin), cv2.FONT_HERSHEY_SIMPLEX , 0.75, [255,0,0], 2, cv2.LINE_AA)
-
-
-cv2.imshow('output', cv2.resize(frame,(1000,700)))
-cv2.waitKey()
