@@ -4,6 +4,7 @@ __pycache__/
 **/*.pt
 **/*.png
 **/*.jpg
+**/*.mp4
 *.py[cod]
 *$py.class
 
