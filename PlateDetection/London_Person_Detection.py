@@ -13,7 +13,6 @@ Person_classes = {0: 'Person'}
 Person_Detector = Person_Detection('weights/car_model.pt', Person_classes)
 
 ################################ image request ##################################################
-
 # url = 'https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/' + '00001.06621' + '.jpg'
 # resp = requests.get(url, stream=True).raw
 # image = np.asarray(bytearray(resp.read()), dtype="uint8")
@@ -29,7 +28,8 @@ with open("camera_list.txt", "r") as f:
 
 ################################ video request ##################################################
 
-cap = cv2.VideoCapture('https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/' + cameras[args.num] + '.mp4')
+cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/' + cameras[args.cam] + '.mp4')
 
 while(True):
     ret, frame = cap.read()
@@ -44,7 +44,7 @@ while(True):
             score = Person['score']
             [(xmin,ymin),(xmax,ymax)] = Person['bbox']
             frame = cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), [0,255,255] , 2) 
-            frame = cv2.putText(frame, f'{label} ({str(score)})', (xmin,ymin), cv2.FONT_HERSHEY_SIMPLEX , 0.75, [0,255,255], 2, cv2.LINE_AA)
+            # frame = cv2.putText(frame, f'{label} ({str(score)})', (xmin,ymin), cv2.FONT_HERSHEY_SIMPLEX , 0.75, [0,255,255], 2, cv2.LINE_AA)
         
         cv2.imshow('image',frame)
         cv2.waitKey(10)
