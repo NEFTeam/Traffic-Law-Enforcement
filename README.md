@@ -1,7 +1,5 @@
 # Traffic Surveillance
 
-# Abstract
-In This Project, We Identified Some Traffic Violations With the Help of Road Cameras. Some of the Specialized Operations Performed Include Identifying the Vehicle on the Road, Identifying the Location of the License Plate in the Image of a Vehicle, Identifying the License Plate Characters and Registering It, as Well as Identifying the Vehicle Line on the Highway, Mainly Through yolov5 Network, Neural Networks, and Computer Vision Algorithms Are Done.
 
 ## Introduction
 In this project, we intend to detect common traffic violations using surveillance cameras on roads.
