@@ -28,7 +28,7 @@ with open("camera_list.txt", "r") as f:
 
 ################################ video request ##################################################
 
-cap = cv2.VideoCapture(0)
+# cap = cv2.VideoCapture(0)
 cap = cv2.VideoCapture('https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/' + cameras[args.cam] + '.mp4')
 
 while(True):
