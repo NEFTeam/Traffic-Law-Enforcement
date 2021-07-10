@@ -11,7 +11,7 @@ args = parser.parse_args()
 
 frame = cv2.imread(args.image)
 
-car_classes = {2: 'car', 7: 'truck'}
+car_classes = {2: 'car', 5: 'bus', 7: 'truck'}
 plate_classes = {0: 'plate'}
 char_classes = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9',
  10: 'a', 11: 'b', 12: 'p', 13: 't', 14: 'c', 15: 'j', 16: 'ch', 17: 'h', 18: 'kh', 19: 'd', 20: 'zal', 21: 'r', 22: 'z', 23: 'zh',

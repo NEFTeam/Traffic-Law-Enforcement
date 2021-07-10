@@ -11,8 +11,10 @@ class LINE_DETECTION():
         self.yolo_model = attempt_load(weights=model_path, map_location=device)
         
     def detect(self, main_img):
+        height, width = main_img.shape[:2]
+        new_height = int((((640/width)*height)//32)*32)
         
-        img = cv2.resize(main_img, (640,384))
+        img = cv2.resize(main_img, (640,new_height))
         img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         img = np.moveaxis(img,-1,0)
         img = torch.from_numpy(img).to(device)
@@ -28,9 +30,9 @@ class LINE_DETECTION():
             for p in pred[0]:
                 score = np.round(p[4].cpu().detach().numpy(),2)
                 xmin = int(p[0] * main_img.shape[1] /640)
-                ymin = int(p[1] * main_img.shape[0] /384)
+                ymin = int(p[1] * main_img.shape[0] /new_height)
                 xmax = int(p[2] * main_img.shape[1] /640)
-                ymax = int(p[3] * main_img.shape[0] /384)
+                ymax = int(p[3] * main_img.shape[0] /new_height)
 
                 item = {'bbox' : [(xmin,ymin),(xmax,ymax)],
                         'score': score}
