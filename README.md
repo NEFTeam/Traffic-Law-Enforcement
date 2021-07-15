@@ -1,10 +1,10 @@
-# Traffic Surveillance
+# An-Embedded-Deep-Learning-based-Package-for-Traffic-Law-Enforcement
 
 
 ## Introduction
 In this project, we intend to detect common traffic violations using surveillance cameras on roads.
 Some of the specialized operations performed during this task include identifying different vehicles on the road, detecting the license plate of each vehicle, recognizing the characters on each license plate and recording them, as well as specifying the lane number of each vehicle. 
-The YOLOv5 network[1] has been widely used throughout this project.
+The YOLOv5 network[1] has been widely used throughout this project. Finally, the project is embedded on the NVIDIA® Jetson Nano B01 ™ Developer Kit and all parts of the project are implemented as embedded hardware.
 
 
 ### Identifying vehicles on the road
@@ -30,11 +30,26 @@ However, to generate the lane masks and their number, image processing methods s
 
 ![30](https://user-images.githubusercontent.com/61683254/117567846-4361c100-b0d3-11eb-909e-062b24d50791.PNG)
 
-### Future plans
-All of the codes and model weights in this repository will be made publicly available upon the completion of the project. Also we intend to implement this project on NVIDIA Jetson Nano Developer Kit.
+### Dataset
+To train the system and evaluate its overall performance in real-world scenarios, an embedded camera was utilized to collect a dataset of urban streets and out-of-town roads containing 314 different samples of HGVs. These films cover various roads, heavy goods vehicles, and license plates and vary in location and time. They also feature light and heavy traffic areas to cover various roads, heavy vehicles, and license plates. In each stage, such as overtaking lane detection, HGV detection, license plate detection, and character detection, the integrated model was trained on 250 photos from this data set. Finally, 45 photos from the data set were used to test the model, which included various types of heavy vehicles. There are 20 violating cars and 25 non-violating automobiles in the evaluation data set.
 
-### Introducing our team
-All of the activities of this project have been under the supervision of the National Elite Foundation of Iran and the team members have received elite points in exchange for carrying out this project.
+Some photos of Dataset:
+
+![2](https://user-images.githubusercontent.com/61683254/125813984-98dbece1-a542-4345-8196-2d0b6e5a6344.png)
+![20](https://user-images.githubusercontent.com/61683254/125813994-1fd1c8fb-26e1-4b9a-9cf3-fc45938b1ba8.png)
+![25](https://user-images.githubusercontent.com/61683254/125814011-58181439-a756-491e-80bf-782388b9fcf5.png)
+![17_2](https://user-images.githubusercontent.com/61683254/125814065-bb7ee05e-7d1f-4339-8946-0482f0cead60.png)
+
+
+
+### Hardware
+The Jetson Nano ™ built by NVIDIA® and Waveshare 12.3MP camera were employed in this study's hardware. The NVIDIA® Jetson Nano B01 ™ Developer Kit with GPU processor is a compact, powerful computer that allows many neural networks to run in parallel for image classification, object identification, segmentation, and speech processing applications. Waveshare's 12.3MP camera captured images with a resolution of 4056 x 3040 pixels. The Sony IMX477-160 sensor powers the camera, which can take up to 90 frames per second. In addition, the operating system on this hardware is Ubuntu 18.04.
+
+Some photos that show the embedded system:
+
+![100](https://user-images.githubusercontent.com/61683254/125813066-3b3f3291-bf8c-4281-bfd8-6f65125c462e.png)
+![101](https://user-images.githubusercontent.com/61683254/125813174-1a66cc32-49a4-4958-8ba7-6594565a849c.jpg)
+
 
 - Abbas Omidi --- [Linkedin](https://www.linkedin.com/in/abbasomidi77/), [Github](https://github.com/abbasomidi77), [Email](mailto:abbasomidi77@gmail.com)
 
