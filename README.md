@@ -51,7 +51,7 @@ Some photos that show the embedded system:
 ![101](https://user-images.githubusercontent.com/61683254/125813174-1a66cc32-49a4-4958-8ba7-6594565a849c.jpg)
 
 
-### Contact Us
+### Contact us
 - Abbas Omidi --- [Linkedin](https://www.linkedin.com/in/abbasomidi77/), [Github](https://github.com/abbasomidi77), [Email](mailto:abbasomidi77@gmail.com)
 
 - Amirhossein Heydarian ---  [Linkedin](https://www.linkedin.com/in/amirhosseinh77/), [Github](https://github.com/amirhosseinh77), [Email](mailto:amirhossein4633@gmail.com )
