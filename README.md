@@ -1,4 +1,4 @@
-# An-Embedded-Deep-Learning-based-Package-for-Traffic-Law-Enforcement
+# An Embedded Deep Learning-based Package for Traffic Law Enforcement
 
 
 ## Introduction
